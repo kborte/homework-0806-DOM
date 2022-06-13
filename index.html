@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>"Неужели получилось" - mp3 плеер с 3 песнями!</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class = "container">
+        <img src = "res/summertime_sadness.jpg" alt = "track cover" id = "trackcover">
+        <div class = "info">
+            <h2 id = "title">Summertime Sadness</h2>
+            <h3 id = "artist">Lana Del Rey</h3>
+            
+            <div class = "progressbar">
+                <div class = "progress"></div>
+                <div class = "circle"></div>
+            </div>
+
+            <div class = "buttons" >
+                <button class = "action" id = "backbutton" onclick = "backFunction()">
+                    <i class = "fas fa-backward"></i>
+                </button>
+
+                <button class = "action" id = "playbutton" onclick = "playFunction()">
+                    <i class = "fas fa-play"></i>
+                </button>
+
+                <button class = "action" id = "nextbutton" onclick = "nextFunction()">
+                    <i class = "fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+
+        <audio src = "res/summertime_sadness.mp3" id = "audio" ontimeupdate = "updateProgress(this)" onended = "ended()"></audio>
+    </div>
+
+    <video id = "backvid">
+        <source src = "res/pexels-jess-vide-5230237.mp4" type = "video/mp4">
+    </video>
+
+    <script src ="index.js"></script>
+</body>
+</html>
